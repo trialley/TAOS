@@ -17,4 +17,4 @@ mkfs
 .gdbinit
 build
 
-./kernel/kernel
+kernel/kernel
