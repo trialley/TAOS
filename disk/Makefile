@@ -49,7 +49,7 @@ _%: %.o $(ULIB)
 _forktest: forktest.o $(ULIB)
 	# forktest has less library code linked in - needs to be small
 	# in order to be able to max out the proc table.
-	$(LD) $(LDFLAGS) -N -e main -Ttext 0 -o _forktest forktest.o ../kernel/ulib.o ../kernel/usys.o
+	$(LD) $(LDFLAGS) -N -e main -Ttext 0 -o _forktest forktest.o ../kernel/ulib/ulib.o ../kernel/usys.o
 	$(OBJDUMP) -S _forktest > forktest.asm
 
 

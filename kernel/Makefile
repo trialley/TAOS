@@ -123,5 +123,5 @@ vectors.S:
 
 
 clean:
-	-rm -f *.o *.d *.asm *.sym vectors.S entryother	initcode initcode.out kernel.elf kernel
+	-rm -f *.o */*.o *.d */*.d *.asm */*.asm *.sym */*.sym vectors.S entryother	initcode initcode.out kernel.elf kernel
 

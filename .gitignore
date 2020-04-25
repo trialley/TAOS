@@ -16,3 +16,5 @@ kernelmemfs
 mkfs
 .gdbinit
 build
+
+./kernel/kernel
