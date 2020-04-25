@@ -73,10 +73,9 @@ all:
 	make build/xv6.img
 
 build/xv6.img:./build/bootblock ./build/kernel.elf
-	dd if=/dev/zero of=xv6.img count=10000
-	dd if=./build/bootblock of=xv6.img conv=notrunc
-	dd if=./build/kernel.elf of=xv6.img seek=1 conv=notrunc
-	cp xv6.img ./build/xv6.img
+	dd if=/dev/zero of=./build/xv6.img count=10000
+	dd if=./build/bootblock of=./build/xv6.img conv=notrunc
+	dd if=./build/kernel.elf of=./build/xv6.img seek=1 conv=notrunc
 
 ###########################
 
