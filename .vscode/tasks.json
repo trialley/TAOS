@@ -1,0 +1,32 @@
+{
+	// 有关 tasks.json 格式的文档，请参见
+	// https://go.microsoft.com/fwlink/?LinkId=733558
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "make",
+			"command": "make",
+			"args": [
+				"qemu-nox-gdb"
+			],
+			// "isBackground": true,
+			// "options": {
+			//     "cwd": "/usr/bin"
+			// },
+			// "problemMatcher": [
+			// "$qemu"
+			// ]
+		},
+		{
+			"type": "shell",
+			"label": "killqemu",
+			"command": "killall",
+			//killall -e qemu-system-i386
+			"args": [
+				"-e",
+				"qemu-system-i386",
+			],
+		}
+	]
+}
