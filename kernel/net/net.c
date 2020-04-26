@@ -110,7 +110,7 @@ netdev_get_netif(struct netdev *dev, int family) {
 	}
 	return NULL;
 }
-
+//注册什么？
 int netproto_register(unsigned short type, void (*handler)(uint8_t *packet, size_t plen, struct netdev *dev)) {
 	struct netproto *entry;
 
@@ -126,10 +126,10 @@ int netproto_register(unsigned short type, void (*handler)(uint8_t *packet, size
 	entry->next = protocols;
 	entry->type = type;
 	entry->handler = handler;
-	protocols = entry;
+	protocols = entry;	//net全局
 	return 0;
 }
-
+//英文很清晰，不翻译
 void netinit(void) {
 	arp_init();
 	ip_init();

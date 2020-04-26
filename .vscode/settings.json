@@ -1,6 +1,7 @@
 {
 	"files.associations": {
 		"fs.h": "c",
-		"user.h": "c"
+		"user.h": "c",
+		"net.h": "c"
 	}
 }
