@@ -311,7 +311,7 @@ int arp_resolve(struct netif *netif, const ip_addr_t *pa, uint8_t *ha, const voi
 int arp_init(void) {
 	struct arp_entry *entry;
 
-	time(&timestamp);
+	time(&timestamp);  //net全局时间戳
 	initlock(&arplock, "arp");
 	netproto_register(NETPROTO_TYPE_ARP, arp_rx);
 	return 0;
