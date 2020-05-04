@@ -67,7 +67,7 @@ all:
 	-mkdir build/kernel
 	-mkdir build/boot
 	-mkdir build/disk
-	make -C disk
+	make -C userprog
 	make -C kernel
 	make -C boot
 	make build/xv6.img
@@ -98,7 +98,7 @@ clean:
 	# $(UPROGS)
 	make -C boot clean
 	make -C kernel clean
-	make -C disk clean
+	make -C userprog clean
 	-rm -rf build
 	# -rm -rf xv6.img
 # try to generate a unique GDB port

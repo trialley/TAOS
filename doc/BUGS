@@ -5,3 +5,6 @@ sh:
 	can't always runcmd in child -- breaks cd.
 	maybe should hard-code PATH=/ ?
 
+ undefined reference to `__umoddi3'
+	$ sudo apt-get install build-essential module-assistant  
+	$ sudo apt-get install gcc-multilib g++-multilib  
