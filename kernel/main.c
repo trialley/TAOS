@@ -44,10 +44,11 @@ int main(void) {
 	tvinit();									 // 中断向量trap vectors
 	binit();									 // buffer cache
 	fileinit();									 // file table
-	ideinit();									 // disk
-	pciinit();									 // pci devices各种设备的驱动在这里初始化
-	netinit();									 // 注册一系列协议处理函数 networking
-	startothers();								 // start other processors
+	ideinit();									 // 磁盘初始化 //disk
+	pciinit();									 // 各种设备的驱动在这里初始化 //pci devices
+	netinit();									 // 注册一系列协议处理函数 //networking
+	startothers();								 // 启动其他CPU //start other processors
+												 // 从这里开始，代码就在每个CPU上都运行一份
 	kinit2(P2V(4 * 1024 * 1024), P2V(PHYSTOP));	 // must come after startothers()
 	userinit();									 // first user process
 	mpmain();									 // finish this processor's setup
@@ -62,6 +63,7 @@ static void mpenter(void) {
 }
 
 // Common CPU setup code.
+//
 static void mpmain(void) {
 	cprintf("cpu%d: starting %d\n", cpuid(), cpuid());
 	idtinit();							// load idt register
