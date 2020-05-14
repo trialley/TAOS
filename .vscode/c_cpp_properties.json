@@ -1,0 +1,13 @@
+{
+	"configurations": [
+		{
+			"name": "STM32",
+			"includePath": [
+				"${workspaceFolder}/include"
+			],
+			"defines": [],
+			"intelliSenseMode": "msvc-x64"
+		}
+	],
+	"version": 4
+}
