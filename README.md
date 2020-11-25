@@ -1,6 +1,8 @@
 TAOS
 >Teaching Assistant Operating System
 
+apt-get install gcc-multilib
+    
 
 ## Network
 
